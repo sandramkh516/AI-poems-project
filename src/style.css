@@ -14,13 +14,15 @@ a {
   width: 700px;
   margin: 100px auto;
 }
-form {
-  display: flex;
-  justify-content: center;
+.form-container {
   padding: 30px 10px;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 15px;
   margin-top: 50px;
+}
+form {
+  display: flex;
+  justify-content: center;
 }
 footer {
   margin-top: 30px;
@@ -49,4 +51,30 @@ footer {
   border-radius: 15px;
   margin-top: 30px;
   padding: 30px 10px;
+}
+.hidden {
+  display: none;
+}
+
+.hint {
+  line-height: 1.5;
+  margin-top: 5px;
+  opacity: 0.6;
+  font-size: 15px;
+  margin-left: 80px;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
